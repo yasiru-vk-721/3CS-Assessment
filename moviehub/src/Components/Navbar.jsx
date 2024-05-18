@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaBars, FaChevronCircleRight } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import "./Navbar.css"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,13 +36,13 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? 'flex' : 'hidden'
-          } md:flex flex-col md:flex-row items-center justify-center gap-16 w-full md:w-auto mt-8   md:mt-0`}
+          } md:flex flex-col md:flex-row items-center justify-center gap-16 w-full md:w-auto mt-8 text-xl   md:mt-0`}
         >
-            <a href="#">Home</a>
-            <a href="#">Movies</a>
-            <a href="#">TV-Series</a>
-            <a href="#">Documantries</a>
-            <a href="#">Contact</a>
+            <a href="#" className='text-cyan-500'>Home</a>
+            <a href="#" class="glow">Movies</a>
+            <a href="#" class="glow">TV-Series</a>
+            <a href="#" class="glow">Documantries</a>
+            <a href="#" class="glow">Contact</a>
         </div>
       </nav>
       <p className='flex flex-wrap items-center justify-center text-6xl'>Dive Into a World of Movies and More...</p>
