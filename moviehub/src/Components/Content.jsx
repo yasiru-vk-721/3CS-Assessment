@@ -80,7 +80,7 @@ const Content = () => {
   };
 
   useEffect(() => {
-    const defaultQuery = `open`; 
+    const defaultQuery = `last`; 
     fetchMovies(defaultQuery);
     fetchAdditionalMovies();
   }, []);
