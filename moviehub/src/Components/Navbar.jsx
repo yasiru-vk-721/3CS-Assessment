@@ -21,9 +21,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="relative z-10 mb-4 md:mb-20 flex flex-col md:flex-row items-center justify-between py-4 md:py-6">
+      <nav className="relative z-10 mb-4  flex flex-col md:flex-row items-center justify-between py-2 md:py-6">
         <div className="flex items-center justify-between w-full md:w-auto">
-          <h2 className="text-3xl md:text-8xl font-extrabold bg-gradient-to-r from-blue-600 via-emerald-800 to-purple-700 bg-clip-text text-4xl tracking-tight text-transparent " style={{ fontFamily: 'Cookie' }}>MovieHub</h2>
+          <h2 className="md:text-8xl font-extrabold bg-gradient-to-r from-blue-600 via-emerald-800 to-purple-700 bg-clip-text text-4xl tracking-tight text-transparent " style={{ fontFamily: 'Cookie' }}>MovieHub</h2>
           <button
             className="md:hidden focus:outline-none"
             onClick={toggleMenu}
