@@ -72,6 +72,34 @@ const Navbar = () => {
               >
                 Home
               </motion.a>
+              <motion.a
+                href="#"
+                className="text-2xl my-2 hover:text-gray-300"
+                variants={menuVariants}
+              >
+                Movies
+              </motion.a>
+              <motion.a
+                href="#"
+                className="text-2xl my-2 hover:text-gray-300"
+                variants={menuVariants}
+              >
+                TV-Series
+              </motion.a>
+              <motion.a
+                href="#"
+                className="text-2xl my-2 hover:text-gray-300"
+                variants={menuVariants}
+              >
+                Documentries
+              </motion.a>
+              <motion.a
+                href="#"
+                className="text-2xl my-2 hover:text-gray-300"
+                variants={menuVariants}
+              >
+                Contact
+              </motion.a>
               <motion.button
                 className="mt-4 text-xl underline flex items-center"
                 onClick={toggleMenu}
