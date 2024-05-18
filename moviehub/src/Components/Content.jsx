@@ -108,7 +108,7 @@ const Content = () => {
   const slideshowImages = [image1, image3, image5, image6]; // Use unique images when uncommenting more
 
   return (
-    <div className="flex flex-col min-h-screen px-20 md:px-20"> {/* Added horizontal padding */}
+    <div className="flex flex-col min-h-screen px-4 md:px-8"> {/* Added horizontal padding */}
       {/* Main content */}
       <div className="flex-grow">
         {/* Slideshow component */}
