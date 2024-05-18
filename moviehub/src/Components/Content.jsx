@@ -105,10 +105,10 @@ const Content = () => {
   };
 
   // List of local images
-  const slideshowImages = [image1, image2, image3, image4, image5, image6]; // Use unique images when uncommenting more
+  const slideshowImages = [image1, image3, image5, image6]; // Use unique images when uncommenting more
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen px-20 md:px-20"> {/* Added horizontal padding */}
       {/* Main content */}
       <div className="flex-grow">
         {/* Slideshow component */}
@@ -126,11 +126,11 @@ const Content = () => {
           </Slider>
         </div>
         
-        {/* Movie card container */}
-        <div className="flex flex-col items-center p-4">
+        {/* Search bar and movie cards */}
+        <div className="flex flex-col items-center p-4 mt-24">
           <input
             type="text"
-            className="w-full max-w-md p-2 pl-2 mb-12 rounded-full border text-gray-700 border-gray-300 focus:outline-none focus:border-blue-500"
+            className="w-full max-w-md p-2 pl-2 mt-96 mb-12  rounded-full border text-gray-700 border-gray-300 focus:outline-none focus:border-blue-500"
             placeholder="Search movies..."
             value={searchQuery}
             onChange={handleSearchChange}
@@ -193,11 +193,12 @@ const Content = () => {
           </div>
         </div>
       </div>
-
+  
       {/* Footer */}
       <Footer />
     </div>
   );
+  
 };
 
 export default Content;
