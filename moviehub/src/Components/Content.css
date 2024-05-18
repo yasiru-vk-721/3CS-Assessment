@@ -1,0 +1,14 @@
+/* CSS for glowing effect */
+@keyframes glowing {
+    0% { box-shadow: 0 0 0 0 rgb(124, 0, 158); }
+    50% { box-shadow: 0 0 20px 50px rgba(0, 123, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+  }
+  
+  /* Apply animation to input when focused */
+  .glowing-border:focus {
+    animation: glowing 1.5s infinite;
+    border-color: #ff00ea; /* Change to your desired glowing color */
+    outline: none; /* Remove default focus outline */
+  }
+  

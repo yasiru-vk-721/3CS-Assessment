@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   const backdropVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0.5 },
     visible: { opacity: 0.5 },
   };
 
@@ -23,7 +23,7 @@ const Navbar = () => {
     <>
       <nav className="relative z-10 mb-4  flex flex-col md:flex-row items-center justify-between py-2 md:py-6">
         <div className="flex items-center justify-between w-full md:w-auto">
-          <h2 className="md:text-8xl font-extrabold bg-gradient-to-r from-blue-600 via-emerald-800 to-purple-700 bg-clip-text text-4xl tracking-tight text-transparent " style={{ fontFamily: 'Cookie' }}>MovieHub</h2>
+          <h2 className="md:text-8xl font-extrabold bg-gradient-to-r from-pink-900 to-blue-500 bg-clip-text text-4xl tracking-tight text-transparent " style={{ fontFamily: 'Cookie' }}>MovieHub</h2>
           <button
             className="md:hidden focus:outline-none"
             onClick={toggleMenu}
@@ -37,11 +37,14 @@ const Navbar = () => {
             isOpen ? 'flex' : 'hidden'
           } md:flex flex-col md:flex-row items-center justify-center gap-16 w-full md:w-auto mt-8   md:mt-0`}
         >
-          <a href="#" className="text-white text-4xl hover:text-gray-300">
-            Dive Into a World of Movies and More...
-          </a>
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">TV-Series</a>
+            <a href="#">Documantries</a>
+            <a href="#">Contact</a>
         </div>
       </nav>
+      <p className='flex flex-wrap items-center justify-center text-6xl'>Dive Into a World of Movies and More...</p>
       <AnimatePresence>
         {isOpen && (
           <>

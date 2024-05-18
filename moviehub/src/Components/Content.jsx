@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import "./Content.css"
 
 // Import local images
 import image1 from '../assets/image1.jpeg';
@@ -81,7 +82,7 @@ const Content = () => {
   };
 
   useEffect(() => {
-    const defaultQuery = `kid`; 
+    const defaultQuery = `open`; 
     fetchMovies(defaultQuery);
     fetchAdditionalMovies(); // Fetch additional movies when component mounts
   }, []);
@@ -108,33 +109,25 @@ const Content = () => {
   const slideshowImages = [image1, image3, image5, image6]; // Use unique images when uncommenting more
 
   return (
-    <div className="flex flex-col min-h-screen px-4 md:px-8"> {/* Added horizontal padding */}
+    <div className="flex flex-col min-h-screen md:px-8"> {/* Added horizontal padding */}
       {/* Main content */}
-      <div className="flex-grow">
-        {/* Slideshow component */}
-        <div className="slideshow-container mb-8 h-96 w-full"> {/* Define height and width */}
-          <Slider {...settings}>
-            {slideshowImages.map((image, index) => (
-              <div key={index} className="slideshow-slide h-full w-full flex justify-center items-center">
-                <img 
-                  src={image} // Ensure the src attribute is correctly set
-                  alt={`Slide ${index + 1}`} 
-                  className="object-cover object-center w-full h-full rounded-2xl" // Adjust height and width
-                />
-              </div>
-            ))}
-          </Slider>
-        </div>
+      <div className="flex-wrap">
+
         
         {/* Search bar and movie cards */}
-        <div className="flex flex-col items-center p-4 mt-24">
-          <input
-            type="text"
-            className="w-full max-w-md p-2 pl-2 mt-96 mb-12  rounded-full border text-gray-700 border-gray-300 focus:outline-none focus:border-blue-500"
-            placeholder="Search movies..."
-            value={searchQuery}
-            onChange={handleSearchChange}
-          />
+        <div className="flex flex-col items-center p-4 mt-10">
+            <input
+                type="text"
+                className="w-full max-w-md p-2 pl-2 mb-12 rounded-full border text-gray-700 border-gray-300 focus:outline-none focus:border-blue-500 glowing-border"
+                placeholder="Search movies..."
+                value={searchQuery}
+                onChange={handleSearchChange}
+            />
+        </div> 
+
+        {/* Slideshow component */}
+ 
+
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {movies.slice(0, 9).map((movie, index) => (
               <motion.div 
@@ -191,7 +184,7 @@ const Content = () => {
               </motion.div>
             ))}
           </div>
-        </div>
+        
       </div>
   
       {/* Footer */}
